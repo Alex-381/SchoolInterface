@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="SchoolInterface.Views.SubjectDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Subject Details" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="25,50,0,0" Text="Subject Name" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBox Text="{x:Bind subject.SubjectName, Mode=TwoWay}" HorizontalAlignment="Left" Margin="25,75,0,0" Width="200" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock Name="reqName" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="25,110,0,0" Text="REQUIRED FIELD" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="8" Foreground="Red" />
+
+            <Button Name="btnSave" Click="btnSave_Click" Content="Save" Margin="25,175,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Page>
